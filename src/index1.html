@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graph Terapan</title>
+    <link rel="icon" href="map.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+  </head>
+  <body>
+    <h1><span class="logo"></span>Graph Terapan</h1>
+    <div>
+      <input type="file" accept=".json" onchange="readDataset(event)" />
+      <label for="view">Set View:</label>
+      <select name="view" id="view" onchange="setView()">
+        <option value="">-- Pilih Daerah --</option>
+        <option value="depok">Depok</option>
+        <option value="bojongsari">Bojongsari</option>
+        <option value="Tangerang">Tanggerang</option>
+    </select>
+    </div>
+    <div id="mapid"></div>
+    <div>
+      <p id="sum-path"></p>
+    </div>
+    <div>
+      <label for="from-node">Start Node:</label>
+      <select
+        name="from-node"
+        id="from-node"
+        onchange="runAlgorithm()"
+      ></select>
+      <label for="to-node">Goal Node:</label>
+      <select name="to-node" id="to-node" onchange="runAlgorithm()"></select>
+      <label for="algorithm">Algoritma:</label>
+      <select name="algorithm" id="algorithm" onchange="runAlgorithm()">
+        <option value="astar">A* Algoritma</option>
+      </select>
+    </div>
+    <script type="text/javascript" src="leaflet.textpath.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

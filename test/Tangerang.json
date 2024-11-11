@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    { "name": "Kampus Pamulang Pusat", "lat": -6.3425, "lon": 106.749 },
+    { "name": "Kampus Pamulang Viktor", "lat": -6.3475, "lon": 106.7425 },
+    { "name": "Kampus Pamulang Witana Harja", "lat": -6.3512, "lon": 106.7581 },
+    { "name": "Bumi Serpong Damai (BSD)", "lat": -6.3026, "lon": 106.6521 },
+    { "name": "Mall Teras Kota", "lat": -6.3016, "lon": 106.6542 },
+    { "name": "Situ Gintung", "lat": -6.2942, "lon": 106.7635 },
+    { "name": "RS Permata Pamulang", "lat": -6.3497, "lon": 106.7612 },
+    { "name": "Pamulang Square", "lat": -6.3408, "lon": 106.7487 },
+    {
+      "name": "Universitas Muhammadiyah Tangerang",
+      "lat": -6.2524,
+      "lon": 106.6325
+    },
+    { "name": "Depok Fantasi Waterpark", "lat": -6.4137, "lon": 106.8224 }
+  ],
+  "edges": [
+    [0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
+    [1, 0, 1, 0, 0, 0, 1, 0, 0, 0],
+    [1, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0, 1, 0],
+    [1, 0, 1, 0, 0, 0, 1, 0, 0, 0],
+    [0, 1, 1, 0, 0, 1, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  ]
+}

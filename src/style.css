@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+
+input[type="file"] {
+    background-color: #444;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 12px;
+    margin-bottom: 32px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="file"]:hover {
+    cursor: pointer;
+    background-color: #555;
+}
+
+#mapid {
+    height: 500px;
+    width: 800px;
+    margin-bottom: 32px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: perspective(800px) rotateX(10deg) scale(0.9);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#mapid.show {
+    opacity: 1;
+    transform: perspective(800px) rotateX(0deg) scale(1);
+}
+
+#sum-path {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+div > p {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+select {
+    background-color: #444;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 12px;
+    margin-bottom: 32px;
+}
+
+select option:hover {
+    background-color: #555;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Untuk perangkat dengan lebar layar 1200px ke bawah (Laptop kecil, Tablet besar) */
+@media (max-width: 1200px) {
+    #mapid {
+        width: 100%; /* Map menyesuaikan lebar kontainer */
+        height: 400px; /* Menurunkan tinggi map agar proporsional */
+    }
+
+    h1 {
+        font-size: 36px; /* Ukuran judul lebih kecil */
+    }
+
+    input[type="file"], select {
+        width: 100%; /* Form input dan select akan memenuhi lebar kontainer */
+        padding: 10px; /* Padding lebih kecil */
+    }
+
+    .loader {
+        width: 25px;
+        height: 25px; /* Ukuran loader lebih kecil */
+    }
+
+    #sum-path, div > p {
+        font-size: 20px; /* Ukuran font sedikit lebih kecil */
+    }
+}
+
+/* Untuk perangkat dengan lebar layar 768px ke bawah (Tablet kecil) */
+@media (max-width: 768px) {
+    body {
+        padding: 15px; /* Memberikan padding yang lebih kecil di layar tablet */
+    }
+
+    h1 {
+        font-size: 28px; /* Ukuran judul lebih kecil */
+        margin-top: 20px;
+    }
+
+    #mapid {
+        width: 100%; /* Map tetap menyesuaikan lebar kontainer */
+        height: 300px; /* Map lebih pendek pada layar kecil */
+    }
+
+    input[type="file"], select {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .loader {
+        width: 20px;
+        height: 20px; /* Ukuran loader lebih kecil */
+    }
+
+    #sum-path, div > p {
+        font-size: 18px; /* Ukuran font lebih kecil */
+    }
+}
+
+/* Untuk perangkat dengan lebar layar 480px ke bawah (Ponsel) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Padding lebih kecil untuk ponsel */
+    }
+
+    h1 {
+        font-size: 24px; /* Judul lebih kecil di ponsel */
+        margin-top: 16px;
+    }
+
+    #mapid {
+        width: 100%;
+        height: 250px; /* Map lebih kecil */
+    }
+
+    input[type="file"], select {
+        width: 100%;
+        padding: 8px; /* Padding lebih kecil */
+    }
+
+    .loader {
+        width: 20px;
+        height: 20px; /* Ukuran loader tetap kecil */
+    }
+
+    #sum-path, div > p {
+        font-size: 16px; /* Ukuran font lebih kecil */
+    }
+}

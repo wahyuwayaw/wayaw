@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px; /* Memberikan padding agar tidak terlalu rapat di perangkat kecil */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #111;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.badge {
+    background-color: #0070f3;
+    color: #fff;
+    padding: 4px 8px;
+    margin-left: 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.hire-me {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px 20px;
+}
+
+.intro h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.intro h1 span {
+    color: #0070f3;
+}
+
+.intro p {
+    font-size: 1.2em;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.typing-effect {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 0;
+    animation: typing 3s steps(30) infinite, blink 0.75s step-end infinite 4s;
+}
+
+/* Animasi mengetik */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Tombol */
+.buttons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    box-shadow: 0 10px 0 black;
+    padding: 10px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn:active {
+    box-shadow: 0 5px 0 black;
+    transform: translateY(5px);
+}
+
+.work-with-me {
+    background-color: #4295e2;
+    color: #fff;
+}
+
+.recent-work {
+    background-color: #333;
+    color: #fff;
+}
+
+.projects-info {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+.projects-info .avatars {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.projects-info .avatars img {
+    width: 100px; /* Memperbesar ukuran avatar */
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.intro img {
+    display: block;
+    margin: 0 auto; /* Mencentangkan gambar secara horizontal */
+    width: 65%; /* Atur lebar gambar sesuai kebutuhan */
+    height: auto;
+    margin-top: -20px; /* Menyesuaikan posisi ke atas */
+    margin-bottom: 70px; /* Menambah jarak antara gambar dan teks */
+}
+
+/* MEDIA QUERIES UNTUK RESPONSIF */
+
+@media (max-width: 1200px) {
+    .intro h1 {
+        font-size: 1.8em;
+    }
+
+    .typing-effect {
+        font-size: 1.4rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Untuk tablet atau layar lebih kecil */
+    .intro h1 {
+        font-size: 1.5em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    .typing-effect {
+        font-size: 1.2rem;
+    }
+
+    .main-container {
+        padding: 20px;
+    }
+
+    .intro img {
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Untuk perangkat mobile kecil */
+    .intro h1 {
+        font-size: 1.3em;
+    }
+
+    .intro p {
+        font-size: 0.9em;
+    }
+
+    .typing-effect {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .intro img {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .main-container {
+        padding: 10px;
+    }
+}
